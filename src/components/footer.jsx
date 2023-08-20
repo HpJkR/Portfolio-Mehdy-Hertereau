@@ -7,7 +7,8 @@ import GitH from '../assets/img/github (1).png';
 
 function Footer() {
   return (
-    <div className='footerContainer'>
+    <>
+    <div className='footerContainer mobile'>
       {/* Lien vers Telephone */}
       <a href="tel:+33609130346" target="_blank" rel="noopener noreferrer">
         <img src={Tel} alt="Appel téléphonique" />
@@ -19,7 +20,7 @@ function Footer() {
       </a>
       
       {/* Texte du footer */}
-      <span>Copyright © 2023 Mehdy Hertereau</span>
+      <span className='copyright1'>Copyright © 2023 Mehdy Hertereau</span>
       
       {/* Lien vers LinkedIn */}
       <a href="https://www.linkedin.com/in/mehdy-hertereau/" target="_blank" rel="noopener noreferrer">
@@ -31,6 +32,11 @@ function Footer() {
         <img src={GitH} alt="GitHub" />
       </a>
     </div>
+    <div className='containerCopyright2'>
+      {/* Texte du footer */}
+    <span className='copyright2'>Copyright © 2023 Mehdy Hertereau</span>
+    </div>
+    </>
   );
 }
 

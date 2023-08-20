@@ -1,21 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-  background-color: #232222;
-}
-
 .container {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
 
   .feuille {
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     
     img {
       position: relative;
@@ -44,14 +33,13 @@ body {
   .goutte {
     width: 100%;
     height: 100%;
-    
     img {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
       position: absolute;
       top: 0;
-      z-index: 0;
+      z-index: 1;
       -webkit-mask-image: linear-gradient(#232222 50%, transparent 100%);
       mask-image: linear-gradient(#232222 50%, transparent 100%);
     }
@@ -64,7 +52,7 @@ body {
     position: absolute;
     z-index: 2;
     top: 0;
-    left: 20px;
+    left: 0;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -73,10 +61,10 @@ body {
         display: flex;
         justify-content: center;
         margin-top: 10px;
+        margin-left: 20px;
       
       #span1 {
         color: #f6f6f6;
-        font-family: "Poppins";
         font-size: clamp(4rem, 3em, 2rem);
         font-style: normal;
         font-weight: 900;
@@ -88,16 +76,17 @@ body {
       #line {
         border-bottom: 5px solid #f6f6f6;
         width: 55%;
+        margin-left: 20px;
       }
 
       .metierContainer {
         display: flex;
         justify-content: center;
         margin-top: 10px;
+        margin-left: 20px;
 
         #span2 {
           color: #f6f6f6;
-          font-family: "Poppins";
           font-size: 48px;
           font-style: normal;
           font-weight: 300;
@@ -109,23 +98,13 @@ body {
 
 @media screen and (max-width: 640px) {
 
-    body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      width: 100%;
-      height: 100%;
-      background-color: #232222;
-    }
-  
     .container {
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
   
       .feuille {
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
         
         img {
           position: relative;
@@ -174,7 +153,7 @@ body {
         position: absolute;
         z-index: 2;
         top: 0;
-        left: 10px;
+        left: 0;
         width: 100%;
         height: 100%;
         justify-content: center;
@@ -209,7 +188,5 @@ body {
           }
         }
       }
-  
-
 }
   

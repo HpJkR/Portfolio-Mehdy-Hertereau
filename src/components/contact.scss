@@ -1,12 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-body {
-    font-family: "Poppins", sans-serif;
-}
-
 .titleProjets {
     display: flex;
-    width: 100%;
+    // width: 100%;
     justify-content: flex-start;
     align-items: center;
     margin-left: 25px;
@@ -25,8 +19,6 @@ body {
     /* Style de l'icône */
     img {
       width: 24px;
-      padding-top: 18px;
-      padding-left: 5px;
       height: 24px;
     }
   }
@@ -35,8 +27,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    // height: auto;
   
     form {
       width: 50%;
@@ -197,14 +189,6 @@ body {
         font-weight: 900;
         line-height: normal;
       }
-    
-      /* Style de l'icône */
-      img {
-        width: 24px;
-        padding-top: 18px;
-        padding-left: 5px;
-        height: 24px;
-      }
     }
     
     .containerContact {
@@ -222,7 +206,7 @@ body {
     
         /* Style des étiquettes */
         label {
-          font-size: 1.5rem;
+          font-size: 1rem;
           font-weight: 600;
           margin-top: 10px;
           margin-bottom: 5px;
@@ -260,7 +244,6 @@ body {
           display: inline-block;
           cursor: pointer;
           color: #ffffff;
-          font-family: "Poppins";
           font-size: 1.5rem;
           padding: 13px 31px;
           text-decoration: none;

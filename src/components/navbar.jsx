@@ -1,28 +1,38 @@
 import { Link } from 'react-scroll';
+import { useState } from 'react';
 import './navbar.scss';
 
 function NavBar() {
-    return (
-    <nav className="menu-container">
-  {/* <!-- burger menu --> */}
-  <input type="checkbox" aria-label="Toggle menu" />
-  <span></span>
-  <span></span>
-  <span></span>
+    const [showLinks, setShowLinks] = useState(false);
 
-  
-  {/* <!-- menu items --> */}
-  <div className="menu">
-    <ul>
-    </ul>
-    <ul>
-      <li><Link to='accueil' smooth={true} duration={500}>ACCUEIL</Link></li>
-      <li><Link to='presentation' smooth={true} duration={500}>À PROPOS DE MOI</Link></li>
-      <li><Link to='projets' smooth={true} duration={500}>PROJETS</Link></li>
-      <li><Link to='contact' smooth={true} duration={500}>CONTACT</Link></li>
-    </ul>
-  </div>
-</nav>
+    const handleLinkClick = () => {
+        setShowLinks(false); // Ferme le menu lorsque l'utilisateur clique sur un lien
+    };
+
+    const handleShowLinks = () => {
+        setShowLinks(!showLinks);
+    };
+
+    return (
+        <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
+            <ul className="navbar_links">
+                <li className="navbar_item slideInDown-1">
+                    <Link to='accueil' className='navbar_link' smooth={true} duration={500} onClick={handleLinkClick}>ACCUEIL</Link>
+                </li>
+                <li className="navbar_item slideInDown-2">
+                    <Link to='presentation' className='navbar_link' smooth={true} duration={500} onClick={handleLinkClick}>À PROPOS DE MOI</Link>
+                </li>
+                <li className="navbar_item slideInDown-3">
+                    <Link to='projets' className='navbar_link' smooth={true} duration={500} onClick={handleLinkClick}>PROJETS</Link>   
+                </li>
+                <li className="navbar_item slideInDown-4">
+                    <Link to='contact' className='navbar_link' smooth={true} duration={500} onClick={handleLinkClick}>CONTACT</Link>
+                </li>
+            </ul>
+            <button className="navbar_burger" onClick={handleShowLinks}>
+                <span className="burger-bar"></span>
+            </button>
+        </nav>
     );
 }
 

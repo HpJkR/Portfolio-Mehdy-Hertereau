@@ -3,12 +3,12 @@ import { useMediaQuery } from 'react-responsive';
 import './App.scss';
 
 import CardsExperience from './components/cardExperience';
+import Carousel  from './components/carousel';
 import Home from './components/home';
 import NavBar from './components/navbar';
 import Presentation from './components/presentation';
 import Projets from './components/projets2';
 import Contact from './components/contact';
-import Carousel from './components/carousel';
 import Footer from './components/footer';
 
 import Fleche from './assets/img/fleche-vers-le-haut.png'
@@ -19,20 +19,23 @@ function App() {
     return (
         <>
             <div className='generalContainer'>
-                <div className='navbarGestion'>
+            <div className='navbarGestion'>
                     <NavBar />
                 </div>
+                <main className='main'>
                 <Element name='accueil'>
                     <Home />
                 </Element>
                 <Element name='presentation'>
                     <Presentation />
                 </Element>
-                {isMobile ? (
-                    <Carousel />
-                ) : (
-                    <CardsExperience />
-                )}
+                <div className='cardsExperienceGestion'>
+                    {isMobile ? (
+                        <Carousel />
+                    ) : (
+                        <CardsExperience />
+                    )}
+                </div>
                 <Element name='projets'>
                     <Projets />
                 </Element>
@@ -40,9 +43,10 @@ function App() {
                     <Contact />
                 </Element>
                 <ScrollLink to='accueil' smooth={true} duration={500} id='scrollLink'>
-                <img id='imgScroll' src={Fleche} alt="" />
+                    <img id='imgScroll' src={Fleche} alt="" />
                 </ScrollLink>
                 <Footer />
+                </main>
             </div>
         </>
     );
