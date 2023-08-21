@@ -18,11 +18,11 @@ function Home () {
             </div>
             <div className='prenomContainer'>
                 <div className='mehdyH'>
-                    <span id='span1'>Mehdy<br />Hertereau</span>
+                    <span className='span1'><span id='word_Mehdy'>Mehdy</span><br /><span id='word_Hertereau'>Hertereau</span></span>
                 </div>
                 <div id='line'></div>
                 <div className='metierContainer'>
-                    <span id='span2'>Développeur Web<br />Full-Stack</span>
+                    <div id='span2'>Web </div>
                 </div>
             </div>
         </div>

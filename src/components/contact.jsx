@@ -1,4 +1,7 @@
 import { useRef, useState } from "react";
+import Swal from 'sweetalert2';
+
+
 import emailjs from "emailjs-com";
 import './contact.scss';
 import Point from '../assets/img/point(2).png';
@@ -34,6 +37,7 @@ function Contact() {
           email: "",
           message: "",
         });
+        showSuccessAlert();
       },
       (error) => {
         console.log(error.text);
@@ -49,8 +53,17 @@ function Contact() {
     });
   };
 
+  const showSuccessAlert = () => {
+    Swal.fire({
+      title: 'Succès!',
+      text: 'Votre e-mail a été envoyé avec succès.',
+      icon: 'success',
+      confirmButtonText: 'OK',
+    });
+  };
+
   return (
-    <>
+    <div className="ContainerMajorContactPage">
       <div className='titleProjets'>
         <h1>Contact</h1>
         <img src={Point} alt="point" />
@@ -103,9 +116,23 @@ function Contact() {
           />
           <button type="submit">ENVOYER</button>
         </form>
+        <div className="iframe_container">
+        <iframe className="iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89076.99395787067!2d4.752557995878991!3d45.758040731360516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1692650008866!5m2!1sfr!2sfr"
+          width="600"
+          height="400"
+          style={{
+          border: "0",
+          }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+></iframe>
+
+        </div>
       </div>
       
-    </>
+    </div>
   );
 }
 

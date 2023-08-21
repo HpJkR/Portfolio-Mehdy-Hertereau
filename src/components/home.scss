@@ -63,16 +63,22 @@
         margin-top: 10px;
         margin-left: 20px;
       
-      #span1 {
+      .span1 {
         color: #f6f6f6;
         font-size: clamp(4rem, 3em, 2rem);
         font-style: normal;
         font-weight: 900;
         line-height: 70px;
+        // border-right: 5px solid;
+        padding-right: 10px;
+        // width: 100%;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // animation: 
+        // typing 2s,
+        // cursor .4s step-end infinite alternate;
       }
-
     }
-
       #line {
         border-bottom: 5px solid #f6f6f6;
         width: 55%;
@@ -91,10 +97,58 @@
           font-style: normal;
           font-weight: 300;
           line-height: 1.2em;
+          overflow: hidden;
+          position: relative;
+        }
+        #span2::after {
+          content: "developer";
+          display: inline-block;
+          animation: animation 6s steps(9) infinite;
+          width: 0ch;
+          color: #CD9A55;
+        }
+        #span2::before {
+          display: inline-block;
+          content: "";
+          width: 10px;
+          height: 100%;
+          background-color: white;
+          position: absolute;
+          right: 0;
+          animation: blinking 0.4s linear alternate infinite;
         }
       }
     }
   }
+  
+
+  // @keyframes cursor {
+  //   50% {border-color: transparent;}
+  // }
+  // @keyframes typing {
+  //   from {width: 0;}
+  // }
+  @keyframes animation {
+    25% {
+      content: "developer";
+      width: 9.5ch;
+    }
+    40% {
+      width: 0ch;
+    }
+    75% {
+      content: "designer";
+      width: 8.5ch;
+    }
+    90% {
+      width: 0ch;
+    }
+  }
+  @keyframes blinking {
+    100% {
+      opacity: 0;}
+  }
+
 
 @media screen and (max-width: 780px) {
 
@@ -146,26 +200,15 @@
         }
       }
       .prenomContainer {
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-
-          #span1 {
-            color: #f6f6f6;
-            font-family: "Poppins";
-            font-size: 1em;
-            font-style: normal;
-            font-weight: 900;
-            line-height: 40px;
+        .mehdyH {
+          .span1 {
+            font-size: 3rem;
+            line-height: 50px;
           }
+          
+        }
+
+          
     
           #line {
             border-bottom: 5px solid #f6f6f6;
