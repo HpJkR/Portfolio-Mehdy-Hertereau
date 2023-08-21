@@ -15,7 +15,7 @@ import Fleche from './assets/img/fleche-vers-le-haut.png'
 
 
 function App() {
-    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const isMobile = useMediaQuery({ maxWidth: 780 });
     return (
         <>
             <div className='generalContainer'>
