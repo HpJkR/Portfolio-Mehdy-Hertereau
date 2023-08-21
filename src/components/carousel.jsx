@@ -39,6 +39,7 @@ const CarouselExperience = () => {
         <div className='insideContainerCarousel'>
           <div className='imgCarouselContainer'>
             <img id='imgCarousel' src={Formation} alt="Formation" />
+            <h1>FORMATIONS</h1>
           </div>
           <div className='contentCarouselContainer'>
             <div>
@@ -66,6 +67,7 @@ const CarouselExperience = () => {
         <div className='insideContainerCarousel'>
           <div className='imgCarouselContainer'>
             <img id='imgCarousel' src={Experience} alt="Expérience" />
+            <h1>EXPÉRIENCE</h1>
           </div>
           <div className='contentCarouselContainer'>
             <div>
@@ -97,6 +99,7 @@ const CarouselExperience = () => {
         <div className='insideContainerCarousel'>
           <div className='imgCarouselContainer'>
             <img id='imgCarousel' src={Competences} alt="Compétences" />
+            <h1>COMPÉTENCES</h1>
           </div>
           <div className='logoMajorContainerCarousel'>
               <div className='titleContainerExperienceCarousel'>

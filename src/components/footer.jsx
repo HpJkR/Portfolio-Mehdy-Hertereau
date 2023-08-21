@@ -15,7 +15,7 @@ function Footer() {
       </a>
       
       {/* Lien vers l'adresse e-mail */}
-      <a href="mailto:adresse@exemple.com">
+      <a href="mailto:m.hertereau@gmail.com">
         <img src={Mail} alt="E-mail" />
       </a>
       

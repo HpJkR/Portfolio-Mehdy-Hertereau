@@ -67,7 +67,7 @@ function Projets() {
           {isGuildExpand ? (
             <div>
               <div>
-                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Apporter une techno qui n’existait pas dans un autre temps.<br /><strong>Projet :</strong> Application de type “Le bon coin” pendant l’Egypte antique.<br/>{"Création d'une application web mobile first à l'aide de Vite.js, Node.js, Sass couplé à une API REST conçue à l'aide d’Express"}</p>
+                <p><strong>Sujet :</strong> Projet de groupe<br /><strong>Objectifs :</strong> Création d’une application web pensée mobile first destinée aux rôlistes dans le but de trouver une partie (8 semaines).<br /><strong>Technologies utilisées :</strong> React, SCSS, Figma, MySQL, NodeJS, Express</p>
               </div>
             </div>
           ) : ''}
@@ -79,7 +79,7 @@ function Projets() {
           {isOsookExpand ? (
             <div>
               <div>
-                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Apporter une techno qui n’existait pas dans un autre temps.<br /><strong>Projet :</strong> Application de type “Le bon coin” pendant l’Egypte antique.<br/>{"Création d'une application web mobile first à l'aide de Vite.js, Node.js, Sass couplé à une API REST conçue à l'aide d’Express"}</p>
+                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Création d’une application type « Le bon coin ».<br /><strong>Technologies utilisées :</strong> React, SCSS, NodeJS, Figma</p>
               </div>
             </div>
           ) : ''}
@@ -91,7 +91,7 @@ function Projets() {
           {isMonkeyShroomExpand ? (
             <div>
               <div>
-                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Apporter une techno qui n’existait pas dans un autre temps.<br /><strong>Projet :</strong> Application de type “Le bon coin” pendant l’Egypte antique.<br/>{"Création d'une application web mobile first à l'aide de Vite.js, Node.js, Sass couplé à une API REST conçue à l'aide d’Express"}</p>
+                <p><strong>Sujet :</strong> Projet de groupe<br /><strong>Objectifs :</strong> Création d’un jeu de type « runner » et d’un site dynamique (5 semaines).<br /><strong>Technologies utilisées :</strong> React, SCSS, Figma, MySQL</p>
               </div>
             </div>
           ) : ''}
@@ -103,7 +103,7 @@ function Projets() {
           {isStarLoveExpand ? (
             <div>
               <div>
-                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Apporter une techno qui n’existait pas dans un autre temps.<br /><strong>Projet :</strong> Application de type “Le bon coin” pendant l’Egypte antique.<br/>{"Création d'une application web mobile first à l'aide de Vite.js, Node.js, Sass couplé à une API REST conçue à l'aide d’Express"}</p>
+                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Création d’une app de rencontre sur l’univers de Star Wars.<br /><strong>Technologies utilisées :</strong> React, SCSS, Figma, Vite, NodeJS</p>
               </div>
             </div>
           ) : ''}
@@ -115,7 +115,7 @@ function Projets() {
           {isLeLaboExpand ? (
             <div>
               <div>
-                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Apporter une techno qui n’existait pas dans un autre temps.<br /><strong>Projet :</strong> Application de type “Le bon coin” pendant l’Egypte antique.<br/>{"Création d'une application web mobile first à l'aide de Vite.js, Node.js, Sass couplé à une API REST conçue à l'aide d’Express"}</p>
+                <p><strong>Sujet :</strong> Projet de groupe<br /><strong>Objectifs :</strong> Réalisation d’un site vitrine d’une clinique (2 semaines).<br /><strong>Technologies utilisées :</strong> JavaScript, HTML, CSS, Figma</p>
               </div>
             </div>
           ) : ''}

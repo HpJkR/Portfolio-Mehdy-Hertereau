@@ -21,7 +21,14 @@
   .navbar_link {
     padding: 0 0.3rem;
     color: inherit;
+    transition: ease-in-out 0.2s;
+    &:hover {
+      color: #79A36E;
+      cursor: pointer;
+      transition: ease-in-out 0.2s;
+    }
   }
+
   .navbar_burger {
     width: 40px;
     height: 40px;
@@ -140,6 +147,9 @@
   }
   .show-nav .slideInDown-4 {
     transition: all 1.3s ease-out;
+  }
+  #barre_droite {
+    display: none;
   }
 
 }
