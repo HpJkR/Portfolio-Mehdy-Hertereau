@@ -84,7 +84,7 @@ const CardsExperience = () => {
                     <div className="additionalContent">
                         <div className='experienceContainer'>
                             <div>
-                                <span>Estiam - Octobre 2023 à Octobre 2024</span>
+                                <span>Estiam - Octobre 2023 à Septembre 2024</span>
                                 <p><strong>3eme année Data & Application Développement</strong><br />Développement des applications mobiles, Java, C#, Angular, Node.JS, Business intelligence, Méthode agile, Administration OS Serveur</p>
                             </div>
                             <div>

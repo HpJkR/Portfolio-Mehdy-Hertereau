@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   // position: fixed;
   width: 100%;
   min-height: 75px;
@@ -13,6 +13,24 @@
   font-size: 1.5rem;
   padding: 1rem;
   border-bottom: 1px solid #FFEDB0;
+
+  .navbar_CV {
+    background-color: #FFEDB0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: #CD9A55;
+      font-size: 1.5rem;
+      padding: 10px;
+      transition: ease-in-out 0.2s;
+      &:hover {
+        color: #79A36E;
+        transition: ease-in-out 0.2s;
+      }
+    }
+  }
 
 
   .navbar_links {
@@ -43,6 +61,11 @@
   .navbar {
     background: transparent;
     border: none;
+    .navbar_CV {
+      a{
+        font-size: 1rem;
+      }
+    }
   }
   .hide-nav {
     background: transparent;

@@ -43,7 +43,7 @@ const CarouselExperience = () => {
           </div>
           <div className='contentCarouselContainer'>
             <div>
-              <span>Estiam - Oct. 2023 à Oct. 2024</span>
+              <span>Estiam - Oct. 2023 à Sept. 2024</span>
               <p><strong>3eme année Data & Application Développement</strong><br />Développement des applications mobiles, Java, C#, Angular, Node.JS, Business intelligence, Méthode agile, Administration OS Serveur</p>
             </div>
             <div>

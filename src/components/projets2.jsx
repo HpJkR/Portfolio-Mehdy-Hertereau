@@ -79,7 +79,7 @@ function Projets() {
           {isOsookExpand ? (
             <div>
               <div>
-                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Création d’une application type « Le bon coin ».<br /><strong>Technologies utilisées :</strong> React, SCSS, NodeJS, Figma</p>
+                <p><strong>Sujet :</strong> Hackaton sur 24H<br /><strong>Objectifs :</strong> Création d’une application type «Le bon coin».<br /><strong>Technologies utilisées :</strong> React, SCSS, NodeJS, Figma</p>
               </div>
             </div>
           ) : ''}
