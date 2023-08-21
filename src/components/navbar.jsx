@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './navbar.scss';
 
 function NavBar() {
-    const pdfUrl = 'src/assets/CV-Estiam-2.pdf';
+    const pdfUrl = 'https://portfolio-mehdy-hertereau.vercel.app/download/CV-Mehdy-Hertereau.pdf';
     const [showLinks, setShowLinks] = useState(false);
 
     const handleLinkClick = () => {
@@ -16,7 +16,7 @@ function NavBar() {
 
     return (
         <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
-            <div className="navbar_CV"><a href="https://portfolio-mehdy-hertereau.vercel.app/download/CV-Mehdy-Hertereau.pdf" download>TÉLÉCHARGER MON CV</a></div>
+            <div className="navbar_CV"><a href={pdfUrl} target="_blank" rel="noopener noreferrer">TÉLÉCHARGER MON CV</a></div>
             <ul className="navbar_links">
                 <li className="navbar_item slideInDown-1">
                     <Link to='accueil' className='navbar_link' smooth={true} duration={500} onClick={handleLinkClick}>ACCUEIL</Link>
