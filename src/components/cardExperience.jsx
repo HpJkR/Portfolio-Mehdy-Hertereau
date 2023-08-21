@@ -5,7 +5,7 @@ import Formation from '../assets/img/education.png'
 import Experience from '../assets/img/experience-utilisateur (2).png'
 import Competences from '../assets/img/langage-de-codage (2).png'
 import HTML from '../assets/img/testHtml.png';
-import CSS from '../assets/img/testCss.png';
+import CSS from '../assets/img/testCSS.png';
 import JS from '../assets/img/testJS.png';
 import Node from '../assets/img/testNode.png';
 import React from '../assets/img/testReact.png';
