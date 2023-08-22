@@ -1,6 +1,7 @@
 import { Element, Link as ScrollLink } from 'react-scroll';
 import { useMediaQuery } from 'react-responsive';
 import './App.scss';
+import './index.scss';
 
 import CardsExperience from './components/cardExperience';
 import Carousel  from './components/carousel';

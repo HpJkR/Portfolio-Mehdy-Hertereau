@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '../variable';
 
 .navbar {
   display: flex;
@@ -21,12 +22,12 @@
     justify-content: center;
     align-items: center;
     a {
-      color: #CD9A55;
+      color: $brown-color;
       font-size: 1.5rem;
       padding: 10px;
       transition: ease-in-out 0.2s;
       &:hover {
-        color: #79A36E;
+        color: $green-color;
         transition: ease-in-out 0.2s;
       }
     }
@@ -35,13 +36,14 @@
 
   .navbar_links {
     display: flex;
+    gap: 10px
   }
   .navbar_link {
     padding: 0 0.3rem;
     color: inherit;
     transition: ease-in-out 0.2s;
     &:hover {
-      color: #79A36E;
+      color: $green-color;
       cursor: pointer;
       transition: ease-in-out 0.2s;
     }
@@ -76,14 +78,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0;
     position: fixed;
     right: -100vw;
     top: 0;
     width: 0;
-    height: 50vh;
+    height: 40vh;
     padding: 2rem;
-    background-color: #CD9A55;
-    border: 3px solid #FFEDB0;
+    background-color: $brown-color;
+    border: 3px solid $yellow-color;
     border-radius: 10px;
     visibility: hidden;
     transition: all .8s ease-out;

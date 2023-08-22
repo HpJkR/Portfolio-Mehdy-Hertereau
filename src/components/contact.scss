@@ -1,3 +1,5 @@
+@import '../variable';
+
 .ContainerMajorContactPage {
   display: flex;
   flex-direction: column;
@@ -15,7 +17,6 @@
     /* Style du titre */
     h1 {
       color: #f6f6f6;
-      font-family: "Poppins";
       font-size: 3.75rem;
       font-style: normal;
       font-weight: 900;
@@ -75,19 +76,18 @@
       /* Style du bouton d'envoi */
       button {
         margin-top: 10px;
-        background-color: #CD9A55;
+        background-color: $brown-color;
         border-radius: 5px;
         display: inline-block;
         cursor: pointer;
         color: #ffffff;
-        font-family: "Poppins";
         font-size: 1.5rem;
         padding: 13px 31px;
         text-decoration: none;
         border: none;
   
         &:hover {
-          background-color: #AA7B3C;
+          background-color: $brown-color;
         }
   
         &:active {
@@ -145,7 +145,7 @@
   
         /* Style du commutateur en position activée */
         input:checked + .slider {
-          background-color: #FFECB0;
+          background-color: $yellow-color;
         }
   
         /* Style du commutateur en position activée avec focus */
@@ -175,7 +175,7 @@
     }
     .iframe_container {
       border: 4px solid #FFEDB0;
-      background: #FFEDB0;
+      background: $yellow-color;
       border-radius: 20px;
       display: inline-block;
       .iframe {
@@ -202,7 +202,6 @@
         /* Style du titre */
         h1 {
           color: #f6f6f6;
-          font-family: "Poppins";
           font-size: 3.75rem;
           font-style: normal;
           font-weight: 900;
@@ -276,7 +275,7 @@
             border: none;
       
             &:hover {
-              background-color: #AA7B3C;
+              background-color: $brown-color;
             }
       
             &:active {
@@ -338,12 +337,12 @@
       
             /* Style du commutateur en position activée */
             input:checked + .slider {
-              background-color: #FFECB0;
+              background-color: $yellow-color;
             }
       
             /* Style du commutateur en position activée avec focus */
             input:focus + .slider {
-              box-shadow: 0 0 1px #FFECB0;
+              box-shadow: 0 0 1px $yellow-color;
             }
       
             /* Déplacement du bouton du commutateur en position activée */

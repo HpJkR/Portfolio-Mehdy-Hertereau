@@ -1,3 +1,5 @@
+@import '../variable';
+
 .generalContainerCarousel {
     display: flex;
     justify-content: center;
@@ -17,7 +19,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 30px;
-            background-color: #7AA56E;
+            background-color: $green-color;
             color: #fff;
             padding: 10px;
             transition: ease-in-out .5s; 
@@ -36,7 +38,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #7AA56E;
+            background-color: $green-color;
             border-radius: 30px;
             padding: 10px;
             color: #fff;
@@ -52,7 +54,6 @@
                 span {
                     font-size: 0.6rem;
                     text-align: center;
-                    font-family: "Poppins";
                 }
                 .logo {
                     display: flex;
