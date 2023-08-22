@@ -1,4 +1,4 @@
-@import '../variable';
+@import "../variable";
 
 .container {
   // width: 100%;
@@ -7,7 +7,7 @@
   .feuille {
     // width: 100%;
     // height: 100%;
-    
+
     img {
       position: relative;
       width: 100vw;
@@ -31,7 +31,7 @@
       z-index: 1;
     }
   }
-  
+
   .goutte {
     width: 100%;
     height: 100%;
@@ -60,11 +60,11 @@
     justify-content: center;
 
     .mehdyH {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-        margin-left: 20px;
-      
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      margin-left: 20px;
+
       .span1 {
         color: #f6f6f6;
         font-size: clamp(4rem, 3em, 2rem);
@@ -76,170 +76,164 @@
         // width: 100%;
         // white-space: nowrap;
         // overflow: hidden;
-        // animation: 
+        // animation:
         // typing 2s,
         // cursor .4s step-end infinite alternate;
       }
     }
+    #line {
+      border-bottom: 5px solid #f6f6f6;
+      width: 55%;
+      margin-left: 20px;
+    }
+
+    .metierContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      margin-left: 20px;
+
+      #span2 {
+        color: #f6f6f6;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.2em;
+        overflow: hidden;
+        position: relative;
+      }
+      #span2::after {
+        content: "Full-Stack";
+        display: inline-block;
+        animation: animation 12s steps(9) infinite;
+        width: 0ch;
+        white-space: nowrap;
+        color: $brown-color;
+      }
+      #span2::before {
+        display: inline-block;
+        content: "";
+        width: 10px;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        animation: blinking 0.4s linear alternate infinite;
+      }
+    }
+  }
+}
+
+// @keyframes cursor {
+//   50% {border-color: transparent;}
+// }
+// @keyframes typing {
+//   from {width: 0;}
+// }
+@keyframes animation {
+  15% {
+    content: "Full-Stack";
+    width: 9ch;
+  }
+  30% {
+    width: 0ch;
+  }
+  50% {
+    content: "Front-End";
+    width: 9.5ch;
+  }
+  60% {
+    width: 0ch;
+  }
+  75% {
+    content: "Back-End";
+    width: 9.5ch;
+  }
+  90% {
+    width: 0ch;
+  }
+}
+
+@keyframes blinking {
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    // width: 100%;
+    // height: 100%;
+
+    .feuille {
+      // width: 100%;
+      // height: 100%;
+
+      img {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        filter: blur(2px);
+        -webkit-mask-image: linear-gradient(#232222 70%, transparent 100%);
+        mask-image: linear-gradient(#232222 70%, transparent 100%);
+      }
+    }
+
+    .polygon {
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        width: 100vw;
+        height: 70vh;
+        top: 180px;
+        z-index: 1;
+      }
+    }
+
+    .goutte {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        -webkit-mask-image: linear-gradient(#232222 50%, transparent 100%);
+        mask-image: linear-gradient(#232222 50%, transparent 100%);
+      }
+    }
+    .prenomContainer {
+      .mehdyH {
+        .span1 {
+          font-size: 3rem;
+          line-height: 50px;
+        }
+      }
+
       #line {
         border-bottom: 5px solid #f6f6f6;
         width: 55%;
-        margin-left: 20px;
       }
 
       .metierContainer {
         display: flex;
         justify-content: center;
         margin-top: 10px;
-        margin-left: 20px;
 
         #span2 {
           color: #f6f6f6;
-          font-size: 48px;
+          font-size: 24px;
           font-style: normal;
           font-weight: 300;
           line-height: 1.2em;
-          overflow: hidden;
-          position: relative;
-        }
-        #span2::after {
-          content: "Full-Stack";
-          display: inline-block;
-          animation: animation 12s steps(9) infinite;
-          width: 0ch;
-          white-space: nowrap;
-          color: $brown-color;
-        }
-        #span2::before {
-          display: inline-block;
-          content: "";
-          width: 10px;
-          height: 100%;
-          background-color: white;
-          position: absolute;
-          right: 0;
-          animation: blinking 0.4s linear alternate infinite;
         }
       }
     }
   }
-  
-
-  // @keyframes cursor {
-  //   50% {border-color: transparent;}
-  // }
-  // @keyframes typing {
-  //   from {width: 0;}
-  // }
-  @keyframes animation {
-    15% {
-      content: "Full-Stack";
-      width: 9ch;
-    }
-    30% {
-      width: 0ch;
-    }
-    50% {
-      content: "Front-End";
-      width: 9.5ch;
-    }
-    60% {
-      width: 0ch;
-    }
-    75% {
-      content: "Back-End";
-      width: 9.5ch;
-    }
-    90% {
-      width: 0ch;
-    }
-  }
-  
-  @keyframes blinking {
-    100% {
-      opacity: 0;}
-  }
-
-
-@media screen and (max-width: 780px) {
-
-    .container {
-      // width: 100%;
-      // height: 100%;
-  
-      .feuille {
-        // width: 100%;
-        // height: 100%;
-        
-        img {
-          position: relative;
-          width: 100vw;
-          height: 100vh;
-          object-fit: cover;
-          filter: blur(2px);
-          -webkit-mask-image: linear-gradient(#232222 70%, transparent 100%);
-          mask-image: linear-gradient(#232222 70%, transparent 100%);
-        }
-      }
-  
-      .polygon {
-        width: 100%;
-        height: 100%;
-  
-        img {
-          position: absolute;
-          width: 100vw;
-          height: 70vh;
-          top: 180px;
-          z-index: 1;
-        }
-      }
-      
-      .goutte {
-        width: 100%;
-        height: 100%;
-        
-        img {
-          width: 100vw;
-          height: 100vh;
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          z-index: 0;
-          -webkit-mask-image: linear-gradient(#232222 50%, transparent 100%);
-          mask-image: linear-gradient(#232222 50%, transparent 100%);
-        }
-      }
-      .prenomContainer {
-        .mehdyH {
-          .span1 {
-            font-size: 3rem;
-            line-height: 50px;
-          }
-          
-        }
-
-          
-    
-          #line {
-            border-bottom: 5px solid #f6f6f6;
-            width: 55%;
-          }
-
-          .metierContainer {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-
-            #span2 {
-              color: #f6f6f6;
-              font-size: 24px;
-              font-style: normal;
-              font-weight: 300;
-              line-height: 1.2em;
-            }
-          }
-        }
-      }
 }
-  

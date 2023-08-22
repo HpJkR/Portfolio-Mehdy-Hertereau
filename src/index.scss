@@ -1,6 +1,14 @@
-@import './_variable.scss';
+@import "./_variable.scss";
+@import "./components/cardExperience.scss";
+@import "./components/carousel.scss";
+@import "./components/contact.scss";
+@import "./components/footer.scss";
+@import "./components/home.scss";
+@import "./components/navbar.scss";
+@import "./components/presentation.scss";
+@import "./components/projets2.scss";
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }

@@ -1,99 +1,96 @@
-@import '../variable';
+@import "../variable";
 
 .generalContainerCarousel {
+  display: flex;
+  justify-content: center;
+  .insideContainerCarousel {
     display: flex;
-    justify-content: center;
-    .insideContainerCarousel {
-        display: flex;
-        width: 80%;
-        flex-direction: column;
-        align-items: center;
-        .imgCarouselContainer {
-            h1 {
-                color: #fff;
-            }
-        }
-        .contentCarouselContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px;
-            background-color: $green-color;
-            color: #fff;
-            padding: 10px;
-            transition: ease-in-out .5s; 
-            span {
-                font-size: 1rem;
-                text-align: center;
-                font-weight: bold;
-            }
-            p {
-                font-size: 1rem;
-                text-align: center;
-            }
-        }
-        .logoMajorContainerCarousel {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: $green-color;
-            border-radius: 30px;
-            padding: 10px;
-            color: #fff;
-            margin-bottom: 10px;
-            .titleContainerExperienceCarousel {
-                font-size: 0.6rem;
-                text-align: center;
-            }
-            .logoContainerCarousel {
-                display: flex;
-                justify-content: center;
-                margin: 10px;
-                span {
-                    font-size: 0.6rem;
-                    text-align: center;
-                }
-                .logo {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-        }
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    .imgCarouselContainer {
+      h1 {
+        color: #fff;
+      }
     }
-
+    .contentCarouselContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      background-color: $green-color;
+      color: #fff;
+      padding: 10px;
+      transition: ease-in-out 0.5s;
+      span {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+    .logoMajorContainerCarousel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $green-color;
+      border-radius: 30px;
+      padding: 10px;
+      color: #fff;
+      margin-bottom: 10px;
+      .titleContainerExperienceCarousel {
+        font-size: 0.6rem;
+        text-align: center;
+      }
+      .logoContainerCarousel {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        span {
+          font-size: 0.6rem;
+          text-align: center;
+        }
+        .logo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
 }
 
 .carousel-root {
-    outline: none;
+  outline: none;
 }
 
 .carousel .slide img {
-    width: 40%;
-    vertical-align: top;
-    border: 0;
+  width: 40%;
+  vertical-align: top;
+  border: 0;
 }
 .carousel .control-dots {
-    // position: absolute;
-    // top: 18%;
-    margin: 10px 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-    opacity: 0;
+  // position: absolute;
+  // top: 18%;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
 }
 .carousel .carousel-status {
-    /* position: absolute; */
-    top: 0;
-    right: 0;
-    padding: 5px;
-    font-size: 10px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
-    color: #fff;
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+  color: #fff;
 }
-
-

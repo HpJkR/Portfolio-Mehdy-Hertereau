@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import '../variable';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "../variable";
 
 .navbar {
   display: flex;
@@ -13,10 +13,10 @@
   color: #fff;
   font-size: 1.5rem;
   padding: 1rem;
-  border-bottom: 1px solid #FFEDB0;
+  border-bottom: 1px solid #ffedb0;
 
   .navbar_CV {
-    background-color: #FFEDB0;
+    background-color: #ffedb0;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -33,10 +33,9 @@
     }
   }
 
-
   .navbar_links {
     display: flex;
-    gap: 10px
+    gap: 10px;
   }
   .navbar_link {
     padding: 0 0.3rem;
@@ -64,7 +63,7 @@
     background: transparent;
     border: none;
     .navbar_CV {
-      a{
+      a {
         font-size: 1rem;
       }
     }
@@ -72,7 +71,6 @@
   .hide-nav {
     background: transparent;
     border: none;
-
   }
   .navbar_links {
     flex-direction: column;
@@ -81,7 +79,8 @@
     gap: 0;
     position: fixed;
     right: -100vw;
-    top: 0;
+    top: 10px;
+    margin-right: 10px;
     width: 0;
     height: 40vh;
     padding: 2rem;
@@ -89,7 +88,7 @@
     border: 3px solid $yellow-color;
     border-radius: 10px;
     visibility: hidden;
-    transition: all .8s ease-out;
+    transition: all 0.8s ease-out;
     .navbar_link {
       display: block;
       padding: 1.5rem;
@@ -130,7 +129,7 @@
     position: relative;
     border-radius: 3px;
     background: #fff;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   .burger-bar::before,
@@ -141,7 +140,6 @@
   }
   .burger-bar::before {
     transform: translateY(-12px);
-
   }
   .burger-bar::after {
     transform: translateY(12px);
@@ -177,5 +175,4 @@
   #barre_droite {
     display: none;
   }
-
 }

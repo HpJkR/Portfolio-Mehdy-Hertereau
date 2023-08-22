@@ -1,118 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import '../variable';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "../variable";
 .cardsExperienceContainer {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    justify-content: center;
-    margin-top: 2%; 
-    cursor: pointer;
-    transition: ease-in-out .5s; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
 
-    &.expanded {
-        flex-direction: column; 
-        align-items: flex-start;
-        transition: ease-in-out .5s; 
-
-    }
-    #titleExperience {
-        font-size: 2.13rem;
-    }
+  &.expanded {
+    flex-direction: column;
+    align-items: flex-start;
+    transition: ease-in-out 0.5s;
+  }
+  #titleExperience {
+    font-size: 2.13rem;
+  }
 }
 .cardsExperience {
-    height: auto;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  cursor: pointer;
+  color: #fff;
+  gap: 30px;
+
+  .imgExperience {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-    cursor: pointer;
-    color: #fff;
-    gap: 30px;
-
-    .imgExperience {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        img {
-            width: 40%;
-            transition: ease-in-out 0.5s;
-            &:hover{
-                -ms-transform: scale(1.2); /* IE 9 */
-                -webkit-transform: scale(1.2); /* Safari 3-8 */
-                transform: scale(1.2);
-                transition: ease-in-out 0.5s;
-                }
-        }
+    img {
+      width: 40%;
+      transition: ease-in-out 0.5s;
+      &:hover {
+        -ms-transform: scale(1.2); /* IE 9 */
+        -webkit-transform: scale(1.2); /* Safari 3-8 */
+        transform: scale(1.2);
+        transition: ease-in-out 0.5s;
+      }
     }
+  }
 }
 
 .expanded {
-    flex-direction: column-reverse;
-    margin-left: 5%;
-    color: $green-color;
-    transition: ease-in-out .5s; 
-    img {
-        width: 70%;
-    }
+  flex-direction: column-reverse;
+  margin-left: 5%;
+  color: $green-color;
+  transition: ease-in-out 0.5s;
+  img {
+    width: 70%;
+  }
 }
 
 .additionalContent {
+  display: flex;
+  position: absolute;
+  width: 50%;
+  height: auto;
+  left: 40%;
+  padding: 10px;
+  margin-top: 10px;
+  color: black;
+  transition: ease-in-out 0.5s;
+  .experienceContainer {
     display: flex;
-    position: absolute;
-    width: 50%;
-    height: auto;
-    left: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 30px;
+    background-color: $green-color;
+    color: #fff;
     padding: 10px;
-    margin-top: 10px;
-    color: black;
-    transition: ease-in-out .5s; 
-    .experienceContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        border-radius: 30px;
-        background-color: $green-color;
-        color: #fff;
-        padding: 10px;
-        transition: ease-in-out .5s; 
-        span {
-            font-size: 1.5rem;
-            text-align: center;
-            font-weight: bold;
-        }
+    transition: ease-in-out 0.5s;
+    span {
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: bold;
     }
-    .logoMajorContainer {
+  }
+  .logoMajorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $green-color;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    .titleContainerExperience {
+      font-size: 0.88rem;
+      text-align: center;
+    }
+    .logoContainer {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      span {
+        font-size: 0.88rem;
+        text-align: center;
+      }
+      .logo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $green-color;
-        border-radius: 30px;
-        margin: 10px;
-        padding: 10px;
-        color: #fff;
-        .titleContainerExperience {
-            font-size: 0.88rem;
-            text-align: center;
-        }
-        .logoContainer {
-            display: flex;
-            justify-content: center;
-            margin: 10px;
-            span {
-                font-size: 0.88rem;
-                text-align: center;
-            }
-            .logo {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        }
+      }
     }
+  }
 }
