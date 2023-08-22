@@ -22,7 +22,7 @@ function Home () {
                 </div>
                 <div id='line'></div>
                 <div className='metierContainer'>
-                    <div id='span2'>Web </div>
+                    <div id='span2'>Développeur web </div>
                 </div>
             </div>
         </div>

@@ -103,10 +103,11 @@
           position: relative;
         }
         #span2::after {
-          content: "developer";
+          content: "Full-Stack";
           display: inline-block;
-          animation: animation 6s steps(9) infinite;
+          animation: animation 12s steps(9) infinite;
           width: 0ch;
+          white-space: nowrap;
           color: $brown-color;
         }
         #span2::before {
@@ -131,21 +132,29 @@
   //   from {width: 0;}
   // }
   @keyframes animation {
-    25% {
-      content: "developer";
+    15% {
+      content: "Full-Stack";
+      width: 9ch;
+    }
+    30% {
+      width: 0ch;
+    }
+    50% {
+      content: "Front-End";
       width: 9.5ch;
     }
-    40% {
+    60% {
       width: 0ch;
     }
     75% {
-      content: "designer";
-      width: 8.5ch;
+      content: "Back-End";
+      width: 9.5ch;
     }
     90% {
       width: 0ch;
     }
   }
+  
   @keyframes blinking {
     100% {
       opacity: 0;}
