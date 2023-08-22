@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "../variable";
+/* Styles pour le conteneur des cartes d'expérience */
 .cardsExperienceContainer {
   display: flex;
   flex-direction: row;
@@ -9,15 +8,19 @@
   cursor: pointer;
   transition: ease-in-out 0.5s;
 
+  /* Styles lorsque la classe "expanded" est appliquée */
   &.expanded {
     flex-direction: column;
     align-items: flex-start;
     transition: ease-in-out 0.5s;
   }
+  /* Styles pour l'élément avec l'id "titleExperience" */
   #titleExperience {
     font-size: 2.13rem;
   }
 }
+
+/* Styles pour les cartes d'expérience */
 .cardsExperience {
   height: auto;
   margin: 10px;
@@ -31,13 +34,17 @@
   color: #fff;
   gap: 30px;
 
+  /* Styles pour l'image à l'intérieur des cartes d'expérience */
   .imgExperience {
     width: 100%;
     display: flex;
     justify-content: center;
+
+    /* Styles pour les images au survol */
     img {
       width: 40%;
       transition: ease-in-out 0.5s;
+
       &:hover {
         -ms-transform: scale(1.2); /* IE 9 */
         -webkit-transform: scale(1.2); /* Safari 3-8 */
@@ -48,16 +55,20 @@
   }
 }
 
+/* Styles lorsque la classe "expanded" est appliquée */
 .expanded {
   flex-direction: column-reverse;
   margin-left: 5%;
   color: $green-color;
   transition: ease-in-out 0.5s;
+
+  /* Styles pour les images lorsque la classe "expanded" est appliquée */
   img {
     width: 70%;
   }
 }
 
+/* Styles pour le contenu additionnel */
 .additionalContent {
   display: flex;
   position: absolute;
@@ -68,6 +79,8 @@
   margin-top: 10px;
   color: black;
   transition: ease-in-out 0.5s;
+
+  /* Styles pour le conteneur d'expérience */
   .experienceContainer {
     display: flex;
     flex-direction: column;
@@ -78,12 +91,16 @@
     color: #fff;
     padding: 10px;
     transition: ease-in-out 0.5s;
+
+    /* Styles pour le texte à l'intérieur du conteneur d'expérience */
     span {
       font-size: 1.5rem;
       text-align: center;
       font-weight: bold;
     }
   }
+
+  /* Styles pour le conteneur de logo majeur */
   .logoMajorContainer {
     display: flex;
     flex-direction: column;
@@ -94,18 +111,26 @@
     margin: 10px;
     padding: 10px;
     color: #fff;
+
+    /* Styles pour le titre à l'intérieur du conteneur de logo majeur */
     .titleContainerExperience {
       font-size: 0.88rem;
       text-align: center;
     }
+
+    /* Styles pour le conteneur de logo */
     .logoContainer {
       display: flex;
       justify-content: center;
       margin: 10px;
+
+      /* Styles pour le texte à l'intérieur du conteneur de logo */
       span {
         font-size: 0.88rem;
         text-align: center;
       }
+
+      /* Styles pour le logo à l'intérieur du conteneur de logo */
       .logo {
         display: flex;
         flex-direction: column;

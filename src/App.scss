@@ -1,16 +1,25 @@
+/* Importation de la police Poppins depuis Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Importation des variables depuis "./variable" (assurez-vous que le chemin d'importation est correct) */
 @import "./variable";
+
+/* Réinitialisation des styles par défaut */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline: none;
 }
+
+/* Styles pour le corps de la page */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #232222;
 }
+
+/* Styles pour la barre de navigation "navbarGestion" */
 .navbarGestion {
   position: absolute;
   top: 0;
@@ -20,26 +29,31 @@ body {
   z-index: 100;
 }
 
+/* Styles pour les éléments de titre (h1) et paragraphe (p) */
 h1,
 p {
   margin-bottom: 1rem;
 }
 
+/* Styles pour les listes non ordonnées (ul) */
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
+/* Styles pour les liens (a) */
 a {
   text-decoration: none;
 }
 
+/* Styles pour la partie principale de la page (main) */
 .main {
   min-height: 200vh;
   // padding: 6rem 1rem 1rem;
 }
 
+/* Styles pour l'élément d'image "imgScroll" utilisé pour le défilement */
 #imgScroll {
   position: fixed;
   bottom: 8%;
@@ -48,12 +62,15 @@ a {
   cursor: pointer;
 }
 
+/* Media query pour les écrans ayant une largeur maximale de 780 pixels */
 @media screen and (max-width: 780px) {
+  /* Styles pour le conteneur général */
   .generalContainer {
     width: 100%;
     height: auto;
     overflow-x: hidden;
 
+    /* Styles pour le lien de défilement "scrollLink" (sera probablement défini ailleurs dans le code) */
     #scrollLink {
       display: none;
     }

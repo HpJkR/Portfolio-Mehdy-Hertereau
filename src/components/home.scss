@@ -1,13 +1,11 @@
+/* Importation des variables depuis "../variable" (assurez-vous que le chemin d'importation est correct) */
 @import "../variable";
 
+/* Styles pour le conteneur principal */
 .container {
-  // width: 100%;
-  // height: 100%;
-
+  /* Styles pour la section "feuille" */
   .feuille {
-    // width: 100%;
-    // height: 100%;
-
+    /* Styles pour les images à l'intérieur de la section "feuille" */
     img {
       position: relative;
       width: 100vw;
@@ -19,10 +17,12 @@
     }
   }
 
+  /* Styles pour la section "polygon" */
   .polygon {
     width: 100%;
     height: 100%;
 
+    /* Styles pour les images à l'intérieur de la section "polygon" */
     img {
       position: absolute;
       width: 0vw;
@@ -32,9 +32,12 @@
     }
   }
 
+  /* Styles pour la section "goutte" */
   .goutte {
     width: 100%;
     height: 100%;
+
+    /* Styles pour les images à l'intérieur de la section "goutte" */
     img {
       width: 100vw;
       height: 100vh;
@@ -47,6 +50,7 @@
     }
   }
 
+  /* Styles pour le conteneur du prénom */
   .prenomContainer {
     display: flex;
     flex-direction: column;
@@ -59,40 +63,39 @@
     height: 100%;
     justify-content: center;
 
+    /* Styles pour la partie "mehdyH" */
     .mehdyH {
       display: flex;
       justify-content: center;
       margin-top: 10px;
       margin-left: 20px;
 
+      /* Styles pour le premier span dans la partie "mehdyH" */
       .span1 {
         color: #f6f6f6;
         font-size: clamp(4rem, 3em, 2rem);
         font-style: normal;
         font-weight: 900;
         line-height: 70px;
-        // border-right: 5px solid;
         padding-right: 10px;
-        // width: 100%;
-        // white-space: nowrap;
-        // overflow: hidden;
-        // animation:
-        // typing 2s,
-        // cursor .4s step-end infinite alternate;
       }
     }
+
+    /* Styles pour la ligne de séparation */
     #line {
       border-bottom: 5px solid #f6f6f6;
       width: 55%;
       margin-left: 20px;
     }
 
+    /* Styles pour le conteneur du métier */
     .metierContainer {
       display: flex;
       justify-content: center;
       margin-top: 10px;
       margin-left: 20px;
 
+      /* Styles pour le deuxième span dans le conteneur du métier */
       #span2 {
         color: #f6f6f6;
         font-size: 48px;
@@ -102,6 +105,8 @@
         overflow: hidden;
         position: relative;
       }
+
+      /* Animation pour le texte du métier */
       #span2::after {
         content: "Full-Stack";
         display: inline-block;
@@ -110,6 +115,8 @@
         white-space: nowrap;
         color: $brown-color;
       }
+
+      /* Animation pour le clignotement du texte */
       #span2::before {
         display: inline-block;
         content: "";
@@ -124,12 +131,7 @@
   }
 }
 
-// @keyframes cursor {
-//   50% {border-color: transparent;}
-// }
-// @keyframes typing {
-//   from {width: 0;}
-// }
+/* Animation pour le texte du métier */
 @keyframes animation {
   15% {
     content: "Full-Stack";
@@ -154,85 +156,55 @@
   }
 }
 
+/* Animation pour le clignotement du texte */
 @keyframes blinking {
   100% {
     opacity: 0;
   }
 }
 
+/* Styles pour les écrans de petite taille */
 @media screen and (max-width: 780px) {
-  .container {
-    // width: 100%;
-    // height: 100%;
+  /* Styles pour la section "polygon" pour les petits écrans */
+  .container .polygon {
+    width: 100%;
+    height: 100%;
+    img {
+      position: absolute;
+      width: 100vw;
+      height: 70vh;
+      top: 180px;
+      z-index: 1;
+    }
+  }
 
-    .feuille {
-      // width: 100%;
-      // height: 100%;
+  /* Styles pour la section "goutte" pour les petits écrans */
+  .container .goutte {
+    img {
+      z-index: 0;
+    }
+  }
 
-      img {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        filter: blur(2px);
-        -webkit-mask-image: linear-gradient(#232222 70%, transparent 100%);
-        mask-image: linear-gradient(#232222 70%, transparent 100%);
+  /* Styles pour le conteneur du prénom pour les petits écrans */
+  .container .prenomContainer {
+    /* Styles pour la partie "mehdyH" pour les petits écrans */
+    .mehdyH {
+      .span1 {
+        font-size: 3rem;
+        line-height: 50px;
       }
     }
 
-    .polygon {
-      width: 100%;
-      height: 100%;
-
-      img {
-        position: absolute;
-        width: 100vw;
-        height: 70vh;
-        top: 180px;
-        z-index: 1;
-      }
+    /* Styles pour la ligne de séparation pour les petits écrans */
+    #line {
+      border-bottom: 5px solid #f6f6f6;
+      width: 55%;
     }
 
-    .goutte {
-      width: 100%;
-      height: 100%;
-
-      img {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        z-index: 0;
-        -webkit-mask-image: linear-gradient(#232222 50%, transparent 100%);
-        mask-image: linear-gradient(#232222 50%, transparent 100%);
-      }
-    }
-    .prenomContainer {
-      .mehdyH {
-        .span1 {
-          font-size: 3rem;
-          line-height: 50px;
-        }
-      }
-
-      #line {
-        border-bottom: 5px solid #f6f6f6;
-        width: 55%;
-      }
-
-      .metierContainer {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-
-        #span2 {
-          color: #f6f6f6;
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 1.2em;
-        }
+    /* Styles pour le conteneur du métier pour les petits écrans */
+    .metierContainer {
+      #span2 {
+        font-size: 24px;
       }
     }
   }

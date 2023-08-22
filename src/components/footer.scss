@@ -1,3 +1,4 @@
+/* Styles pour le conteneur du pied de page */
 .footerContainer {
   display: flex;
   justify-content: space-around;
@@ -5,15 +6,21 @@
   background-color: #1a1a1a;
   height: auto;
   padding: 10px;
+
+  /* Styles pour les liens dans le pied de page */
   a {
     display: flex;
     justify-content: center;
+
+    /* Styles pour les images à l'intérieur des liens */
     img {
       width: 50%;
       object-fit: contain;
       aspect-ratio: 3/2;
     }
   }
+
+  /* Styles pour les éléments "span" dans le pied de page */
   span {
     color: #fff;
     font-size: clamp(2rem, 1rem, 0.5rem);
@@ -21,15 +28,24 @@
     width: 100%;
   }
 }
+
+/* Styles pour la classe "copyright2" (initiallement masquée) */
 .copyright2 {
   display: none;
 }
+
+/* Styles pour les écrans de petite taille */
 @media screen and (max-width: 780px) {
+  /* Masquage de la classe "copyright1" pour les petits écrans */
   .copyright1 {
     display: none;
   }
+
+  /* Styles pour le conteneur de la deuxième version du copyright pour les petits écrans */
   .containerCopyright2 {
     background: #1a1a1a;
+
+    /* Styles pour la classe "copyright2" pour les petits écrans */
     .copyright2 {
       display: block;
       text-align: center;

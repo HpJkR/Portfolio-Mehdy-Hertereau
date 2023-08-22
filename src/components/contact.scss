@@ -1,14 +1,14 @@
-@import "../variable";
-
+/* Styles pour le conteneur principal de la page de contact */
 .ContainerMajorContactPage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   gap: 5rem;
+
+  /* Styles pour le titre des projets */
   .titleProjets {
     display: flex;
-    // width: 100%;
     justify-content: flex-start;
     align-items: center;
     margin-left: 25px;
@@ -30,11 +30,13 @@
     }
   }
 
+  /* Styles pour le conteneur de contact */
   .containerContact {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
+    /* Styles pour le formulaire de contact */
     form {
       width: 50%;
       display: flex;
@@ -150,7 +152,7 @@
 
         /* Style du commutateur en position activée avec focus */
         input:focus + .slider {
-          box-shadow: 0 0 1px #ffecb0;
+          box-shadow: 0 0 1px $yellow-color;
         }
 
         /* Déplacement du bouton du commutateur en position activée */
@@ -167,17 +169,23 @@
           border-radius: 50%;
         }
       }
+
+      /* Style du champ de l'entreprise */
       .company-field {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
       }
     }
+
+    /* Styles pour le conteneur de l'iframe */
     .iframe_container {
       border: 4px solid #ffedb0;
       background: $yellow-color;
       border-radius: 20px;
       display: inline-block;
+
+      /* Styles pour l'iframe */
       .iframe {
         border-radius: 20px;
         border: none;
@@ -186,181 +194,40 @@
   }
 }
 
+/* Styles pour les écrans de petite taille */
 @media screen and (max-width: 780px) {
   .ContainerMajorContactPage {
     gap: 1rem;
-    .titleProjets {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      align-items: center;
-      margin-left: 25px;
-      margin-top: 5%;
 
-      /* Style du titre */
-      h1 {
-        color: #f6f6f6;
-        font-size: 3.75rem;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;
-      }
-    }
-
+    /* Styles pour le conteneur de contact */
     .containerContact {
-      display: flex;
       justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: auto;
+
+      /* Styles pour le conteneur de l'iframe en cas de petite taille d'écran */
       .iframe_container {
         display: none;
         border: 0px;
+
+        /* Styles pour l'iframe en cas de petite taille d'écran */
         .iframe {
           display: none;
         }
       }
 
+      /* Styles pour le formulaire de contact en cas de petite taille d'écran */
       form {
         width: 80%;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5%;
 
         /* Style des étiquettes */
         label {
           font-size: 1rem;
-          font-weight: 600;
-          margin-top: 10px;
-          margin-bottom: 5px;
-          color: #fff;
         }
 
-        /* Style des champs de saisie */
-        input,
-        textarea {
-          padding: 5px;
-          font-size: 1rem;
-          border-width: 1px;
-          border-color: #cccccc;
-          background-color: #ffffff;
-          color: black;
-          border-style: solid;
-          border-radius: 10px;
-          box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
-
-          &:focus {
-            outline: none;
-          }
-        }
-
-        /* Style des zones de texte */
-        textarea {
-          min-height: 100px;
-        }
-
-        /* Style du bouton d'envoi */
-        button {
-          margin-top: 10px;
-          background-color: #cd9a55;
-          border-radius: 5px;
-          display: inline-block;
-          cursor: pointer;
-          color: #ffffff;
-          font-size: 1.5rem;
-          padding: 13px 31px;
-          text-decoration: none;
-          border: none;
-
-          &:hover {
-            background-color: $brown-color;
-          }
-
-          &:active {
-            position: relative;
-            outline: none;
-            top: 1px;
-          }
-        }
-
-        /* Style du conteneur du commutateur */
+        /* Style du conteneur du commutateur en cas de petite taille d'écran */
         .toggle-container {
-          display: flex;
-          width: 100%;
-          justify-content: space-around;
-          align-items: center;
-
           #iAMtoggle {
             display: none;
           }
-
-          /* Style du commutateur */
-          .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-          }
-
-          /* Masquage de la case à cocher HTML par défaut */
-          .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-          }
-
-          /* Style du curseur du commutateur */
-          .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-          }
-
-          /* Style du bouton du commutateur */
-          .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: 0.4s;
-          }
-
-          /* Style du commutateur en position activée */
-          input:checked + .slider {
-            background-color: $yellow-color;
-          }
-
-          /* Style du commutateur en position activée avec focus */
-          input:focus + .slider {
-            box-shadow: 0 0 1px $yellow-color;
-          }
-
-          /* Déplacement du bouton du commutateur en position activée */
-          input:checked + .slider:before {
-            transform: translateX(26px);
-          }
-
-          /* Style du commutateur avec coin arrondi */
-          .slider.round {
-            border-radius: 34px;
-          }
-
-          .slider.round:before {
-            border-radius: 50%;
-          }
-        }
-        .company-field {
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
         }
       }
     }

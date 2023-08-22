@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Import des styles depuis le fichier "variable" (assumant qu'il existe) */
 @import "../variable";
 
+/* Styles pour la barre de navigation */
 .navbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  // position: fixed;
   width: 100%;
   min-height: 75px;
   background-color: #222222;
@@ -15,6 +15,7 @@
   padding: 1rem;
   border-bottom: 1px solid #ffedb0;
 
+  /* Styles pour le lien du CV dans la barre de navigation */
   .navbar_CV {
     background-color: #ffedb0;
     border-radius: 10px;
@@ -33,6 +34,7 @@
     }
   }
 
+  /* Styles pour les liens de la barre de navigation */
   .navbar_links {
     display: flex;
     gap: 10px;
@@ -48,6 +50,7 @@
     }
   }
 
+  /* Styles pour l'icône du menu "burger" dans la version mobile */
   .navbar_burger {
     width: 40px;
     height: 40px;
@@ -58,7 +61,9 @@
   }
 }
 
+/* Styles pour les écrans avec une largeur maximale de 780px (version mobile) */
 @media screen and (max-width: 780px) {
+  /* Styles pour la barre de navigation dans la version mobile */
   .navbar {
     background: transparent;
     border: none;
@@ -68,6 +73,7 @@
       }
     }
   }
+  /* Styles pour la navigation mobile */
   .hide-nav {
     background: transparent;
     border: none;
@@ -95,11 +101,13 @@
       font-size: 5vw;
     }
   }
+  /* Affichage de la navigation mobile */
   .show-nav .navbar_links {
     width: 80%;
     right: 0;
     visibility: visible;
   }
+  /* Styles pour la séparation entre les liens de navigation */
   .navbar_item::after {
     content: "";
     display: block;
@@ -108,9 +116,11 @@
     height: 1px;
     background: #fff;
   }
+  /* Masquer la séparation après le dernier lien */
   .navbar_item:last-child::after {
     display: none;
   }
+  /* Styles pour l'icône du menu "burger" en version mobile */
   .navbar_burger {
     display: block !important;
     position: fixed;
@@ -120,6 +130,7 @@
       cursor: pointer;
     }
   }
+  /* Styles pour les barres du menu "burger" en version mobile */
   .burger-bar,
   .burger-bar::before,
   .burger-bar::after {
@@ -132,6 +143,7 @@
     transition: all 0.5s ease-in-out;
   }
 
+  /* Positionnement des barres du menu "burger" en version mobile */
   .burger-bar::before,
   .burger-bar::after {
     content: "";
@@ -144,6 +156,8 @@
   .burger-bar::after {
     transform: translateY(12px);
   }
+
+  /* Animation des barres du menu "burger" en version mobile lors de l'ouverture */
   .show-nav .burger-bar {
     width: 0;
     background: transparent;
@@ -154,12 +168,15 @@
   .show-nav .burger-bar::after {
     transform: rotate(-45deg);
   }
+
+  /* Animation des liens de navigation en version mobile lors de l'ouverture */
   .navbar_item {
     transform: translateX(100vh);
   }
   .show-nav .navbar_item {
     transform: translateX(0);
   }
+  /* Animations pour l'apparition progressive des liens en version mobile */
   .show-nav .slideInDown-1 {
     transition: all 1s ease-out;
   }
@@ -172,6 +189,7 @@
   .show-nav .slideInDown-4 {
     transition: all 1.3s ease-out;
   }
+  /* Masquer l'élément avec l'ID "barre_droite" en version mobile */
   #barre_droite {
     display: none;
   }

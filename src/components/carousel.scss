@@ -1,19 +1,26 @@
+/* Importation des variables depuis "../variable" (assurez-vous que le chemin d'importation est correct) */
 @import "../variable";
 
-
+/* Styles pour le conteneur général du carousel */
 .generalContainerCarousel {
   display: flex;
   justify-content: center;
+
+  /* Styles pour le conteneur intérieur du carousel */
   .insideContainerCarousel {
     display: flex;
     width: 80%;
     flex-direction: column;
     align-items: center;
+
+    /* Styles pour le conteneur d'image du carousel */
     .imgCarouselContainer {
       h1 {
         color: #fff;
       }
     }
+
+    /* Styles pour le conteneur de contenu du carousel */
     .contentCarouselContainer {
       display: flex;
       flex-direction: column;
@@ -24,6 +31,8 @@
       color: #fff;
       padding: 10px;
       transition: ease-in-out 0.5s;
+
+      /* Styles pour le texte à l'intérieur du conteneur de contenu du carousel */
       span {
         font-size: 1rem;
         text-align: center;
@@ -34,6 +43,8 @@
         text-align: center;
       }
     }
+
+    /* Styles pour le conteneur de logo majeur du carousel */
     .logoMajorContainerCarousel {
       display: flex;
       flex-direction: column;
@@ -44,18 +55,26 @@
       padding: 10px;
       color: #fff;
       margin-bottom: 10px;
+
+      /* Styles pour le titre à l'intérieur du conteneur de logo majeur du carousel */
       .titleContainerExperienceCarousel {
         font-size: 0.6rem;
         text-align: center;
       }
+
+      /* Styles pour le conteneur de logo du carousel */
       .logoContainerCarousel {
         display: flex;
         justify-content: center;
         margin: 10px;
+
+        /* Styles pour le texte à l'intérieur du conteneur de logo du carousel */
         span {
           font-size: 0.6rem;
           text-align: center;
         }
+
+        /* Styles pour le logo à l'intérieur du conteneur de logo du carousel */
         .logo {
           display: flex;
           flex-direction: column;
@@ -67,18 +86,22 @@
   }
 }
 
+/* Styles pour la racine du carousel */
 .carousel-root {
   outline: none;
 }
 
+/* Styles pour les images des diapositives du carousel */
 .carousel .slide img {
   width: 40%;
   vertical-align: top;
   border: 0;
 }
+
+/* Styles pour les points de contrôle du carousel */
 .carousel .control-dots {
-  // position: absolute;
-  // top: 18%;
+  /* position: absolute; */
+  /* top: 18%; */
   margin: 10px 0;
   padding: 0;
   text-align: center;
@@ -86,6 +109,8 @@
   z-index: 1;
   opacity: 0;
 }
+
+/* Styles pour le statut du carousel */
 .carousel .carousel-status {
   /* position: absolute; */
   top: 0;

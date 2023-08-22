@@ -1,8 +1,8 @@
+/* Importation des variables depuis "../variable" (assurez-vous que le chemin d'importation est correct) */
 @import "../variable";
 
+/* Styles pour le conteneur principal des projets */
 .containerProjets {
-  // width: 100%;
-  // height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -26,11 +26,13 @@
       font-weight: 900;
       line-height: normal;
     }
+
     img {
       width: 24px;
       height: 24px;
     }
   }
+
   /* Styles pour les animations de transition entre les états cachés et affichés */
   .hidden1 {
     opacity: 0;
@@ -58,11 +60,13 @@
     transition: all 1s;
   }
 
+  /* Styles pour le conteneur interne des projets */
   .containerInsideProjets {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+
     /* Styles pour la classe .cardGuild */
     .cardGuild {
       display: flex;
@@ -89,12 +93,12 @@
       }
       &.cardExpand {
         width: 40%;
-        height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
+        height: auto;
       }
 
       &.hiddenCard {
         width: 40%;
-        height: 150px; /* Hauteur fixe en mode replié */
+        height: 150px;
         overflow: hidden;
       }
 
@@ -138,12 +142,12 @@
       }
       &.cardExpand {
         width: 40%;
-        height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
+        height: auto;
       }
 
       &.hiddenCard {
         width: 40%;
-        height: 150px; /* Hauteur fixe en mode replié */
+        height: 150px;
         overflow: hidden;
       }
 
@@ -186,12 +190,12 @@
       }
       &.cardExpand {
         width: 40%;
-        height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
+        height: auto;
       }
 
       &.hiddenCard {
         width: 40%;
-        height: 150px; /* Hauteur fixe en mode replié */
+        height: 150px;
         overflow: hidden;
       }
 
@@ -234,12 +238,12 @@
       }
       &.cardExpand {
         width: 40%;
-        height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
+        height: auto;
       }
 
       &.hiddenCard {
         width: 40%;
-        height: 150px; /* Hauteur fixe en mode replié */
+        height: 150px;
         overflow: hidden;
       }
 
@@ -282,12 +286,12 @@
       }
       &.cardExpand {
         width: 40%;
-        height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
+        height: auto;
       }
 
       &.hiddenCard {
         width: 40%;
-        height: 150px; /* Hauteur fixe en mode replié */
+        height: 150px;
         overflow: hidden;
       }
 
@@ -308,147 +312,37 @@
   }
 }
 
-/* Media query pour les écrans ayant une largeur maximale de 640 pixels */
+/* Media query pour les écrans ayant une largeur maximale de 780 pixels */
 @media screen and (max-width: 780px) {
   .containerProjets {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 5%;
-
-    /* Styles pour la classe .titleProjets */
-    .titleProjets {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      align-items: center;
-      margin-left: 50px;
-      margin-top: 50px;
-
-      h1 {
-        color: #f6f6f6;
-        font-size: 60px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;
-      }
-    }
-    /* Styles pour les animations de transition entre les états cachés et affichés */
-    .hidden1 {
-      opacity: 0;
-      filter: blur(5px);
-      transform: translateX(-100%);
-      transition: all 1s;
-    }
-
-    .show1 {
-      opacity: 1;
-      transform: translateX(0);
-      transition: all 1s;
-    }
-
-    .hidden2 {
-      opacity: 0;
-      filter: blur(5px);
-      transform: translateX(100%);
-      transition: all 1s;
-    }
-
-    .show2 {
-      opacity: 1;
-      transform: translateX(0);
-      transition: all 1s;
-    }
-
     .containerInsideProjets {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
       /* Styles pour la classe .cardGuild */
       .cardGuild {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: $green-color;
-        border: 3px solid $yellow-color;
-        margin: 30px;
-        padding-top: 10px;
-        color: #fff;
-        border-radius: 1em;
-
-        &.expand {
-          div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 300px;
-            font-size: 1.5px;
-            color: #f6f6f6;
-          }
-        }
         &.cardExpand {
           width: 100%;
-          height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
         }
 
         &.hiddenCard {
           width: 100%;
-          height: 150px; /* Hauteur fixe en mode replié */
-          overflow: hidden;
         }
 
         img {
           width: 220px;
-          height: auto;
         }
 
         p {
-          color: #f6f6f6;
           font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 100;
-          line-height: 2em;
-          padding: 10px;
         }
       }
 
       /* Styles pour la classe .cardOsook */
       .cardOsook {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: $green-color;
-        border: 3px solid $yellow-color;
-        margin: 30px;
-        padding-top: 10px;
-        color: #fff;
-        border-radius: 1em;
-
-        &.expand {
-          div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-size: 1.5rem;
-            color: #f6f6f6;
-          }
-        }
         &.cardExpand {
           width: 100%;
-          height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
         }
 
         &.hiddenCard {
           width: 100%;
-          height: 150px; /* Hauteur fixe en mode replié */
-          overflow: hidden;
         }
 
         img {
@@ -457,156 +351,60 @@
         }
 
         p {
-          color: #f6f6f6;
           font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 100;
-          line-height: 2em;
-          padding: 10px;
         }
       }
       /* Styles pour la classe .cardMonkeyShroom */
       .cardMonkeyShroom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: $green-color;
-        border: 3px solid $yellow-color;
-        margin: 30px;
-        padding-top: 10px;
-        color: #fff;
-        border-radius: 1em;
-
-        &.expand {
-          div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-size: 1.5rem;
-            color: #f6f6f6;
-          }
-        }
         &.cardExpand {
           width: 100%;
-          height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
         }
 
         &.hiddenCard {
           width: 100%;
-          height: 150px; /* Hauteur fixe en mode replié */
-          overflow: hidden;
         }
-
         img {
           width: 244px;
-          height: auto;
         }
 
         p {
-          color: #f6f6f6;
           font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 100;
-          line-height: 2em;
-          padding: 10px;
         }
       }
       /* Styles pour la classe .cardStarLove */
       .cardStarLove {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: $green-color;
-        border: 3px solid $yellow-color;
-        margin: 30px;
-        padding-top: 10px;
-        color: #fff;
-        border-radius: 1em;
-
-        &.expand {
-          div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-size: 1.5rem;
-            color: #f6f6f6;
-          }
-        }
         &.cardExpand {
           width: 100%;
-          height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
         }
 
         &.hiddenCard {
           width: 100%;
-          height: 150px; /* Hauteur fixe en mode replié */
-          overflow: hidden;
         }
 
         img {
           width: 167px;
-          height: auto;
         }
 
         p {
-          color: #f6f6f6;
           font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 100;
-          line-height: 2em;
-          padding: 10px;
         }
       }
       /* Styles pour la classe .cardLeLabo */
       .cardLeLabo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: $green-color;
-        border: 3px solid $yellow-color;
-        margin: 30px;
-        padding-top: 10px;
-        color: #fff;
-        border-radius: 1em;
-
-        &.expand {
-          div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-size: 1.5rem;
-            color: #f6f6f6;
-          }
-        }
         &.cardExpand {
           width: 100%;
-          height: auto; /* Pour que la hauteur s'adapte au contenu lorsque déplié */
         }
 
         &.hiddenCard {
           width: 100%;
-          height: 150px; /* Hauteur fixe en mode replié */
-          overflow: hidden;
         }
 
         img {
           width: 293px;
-          height: auto;
         }
 
         p {
-          color: #f6f6f6;
           font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 100;
-          line-height: 2em;
-          padding: 10px;
         }
       }
     }
