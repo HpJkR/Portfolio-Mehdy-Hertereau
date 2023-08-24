@@ -1,39 +1,65 @@
 import { Link } from "react-scroll";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-function NavBar() {
+function NavBar({ onNavbarClick }) {
   const pdfUrl =
     "https://portfolio-mehdy-hertereau.vercel.app/download/CV-Mehdy-Hertereau.pdf";
-  const [showLinks, setShowLinks] = useState(false);
-
-  const handleLinkClick = () => {
-    setShowLinks(false); // Ferme le menu lorsque l'utilisateur clique sur un lien
-  };
-
-  const handleShowLinks = () => {
-    setShowLinks(!showLinks);
-  };
-
+    const [showLinks, setShowLinks] = useState(false);
+    const [hideNavItems, setHideNavItems] = useState(true);
+  
+    const handleScrollNav = () => {
+      // Réinitialise l'état du menu lorsque l'utilisateur fait défiler
+      setShowLinks(false);
+      setHideNavItems(true);
+    };
+  
+    useEffect(() => {
+      window.addEventListener("scroll", handleScrollNav);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScrollNav);
+      };
+    }, []);
+  
+    const handleLinkClick = () => {
+      // Réinitialise l'état du menu lorsque l'utilisateur clique sur un lien
+      setShowLinks(false);
+    };
+  
+    const handleHelloButtonClick = () => {
+      setShowLinks(!showLinks);
+      onNavbarClick();
+      setHideNavItems((prevHideNavItems) => !prevHideNavItems);
+    };
   return (
     <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
-      <div className="navbar_CV">
-        <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-          TÉLÉCHARGER LE CV
-        </a>
+      <div className="navbarHeader">
+        <div className="navbar_CV">
+          <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
+            TÉLÉCHARGER LE CV
+          </a>
+        </div>
+        <div id="menuToggle" onClick={handleHelloButtonClick} >
+          <input type="checkbox" />
+          <span id="span1"className={showLinks ? "span1" : ""}></span>
+          <span id="span2"className={showLinks ? "span2" : ""}></span>
+          <span id="span3"className={showLinks ? "span3" : ""}></span>
+        </div>
       </div>
-      <ul className="navbar_links">
+      <ul className={`navbar_links ${hideNavItems ? "slide-out" : ""}`}>
         <li className="navbar_item slideInDown-1">
           <Link
             to="accueil"
             className="navbar_link"
             smooth={true}
             duration={500}
-            onClick={handleLinkClick}
+            onClick={handleHelloButtonClick}
           >
             ACCUEIL
           </Link>
         </li>
-        <span id="barre_droite">|</span>
+        <span id="barre_droite"></span>
         <li className="navbar_item slideInDown-2">
           <Link
             to="presentation"
@@ -45,7 +71,7 @@ function NavBar() {
             À PROPOS DE MOI
           </Link>
         </li>
-        <span id="barre_droite">|</span>
+        <span id="barre_droite"></span>
         <li className="navbar_item slideInDown-3">
           <Link
             to="projets"
@@ -57,7 +83,7 @@ function NavBar() {
             PROJETS
           </Link>
         </li>
-        <span id="barre_droite">|</span>
+        <span id="barre_droite"></span>
         <li className="navbar_item slideInDown-4">
           <Link
             to="contact"
@@ -70,11 +96,11 @@ function NavBar() {
           </Link>
         </li>
       </ul>
-      <button className="navbar_burger" onClick={handleShowLinks}>
-        <span className="burger-bar"></span>
-      </button>
     </nav>
   );
 }
+NavBar.propTypes = {
+  onNavbarClick: PropTypes.func.isRequired,
+};
 
 export default NavBar;

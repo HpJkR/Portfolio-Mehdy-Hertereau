@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 2%;
-  cursor: pointer;
   transition: ease-in-out 0.5s;
 
   /* Styles lorsque la classe "expanded" est appliquée */
@@ -30,7 +29,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  cursor: pointer;
   color: #fff;
   gap: 30px;
 
@@ -39,11 +37,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    
+    
 
     /* Styles pour les images au survol */
     img {
       width: 40%;
       transition: ease-in-out 0.5s;
+      cursor: pointer;
+      
 
       &:hover {
         -ms-transform: scale(1.2); /* IE 9 */

@@ -1,7 +1,4 @@
-/* Importation de la police Poppins depuis Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/* Importation des variables depuis "./variable" (assurez-vous que le chemin d'importation est correct) */
 @import "./variable";
 
 /* Réinitialisation des styles par défaut */
@@ -10,6 +7,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  // overflow-x: hidden;
 }
 
 /* Styles pour le corps de la page */
@@ -17,6 +15,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #232222;
+  overflow-x: hidden;
 }
 
 /* Styles pour la barre de navigation "navbarGestion" */
@@ -56,10 +55,27 @@ a {
 /* Styles pour l'élément d'image "imgScroll" utilisé pour le défilement */
 #imgScroll {
   position: fixed;
+  z-index: 200;
   bottom: 8%;
   left: 95%;
   width: 5%;
   cursor: pointer;
+  transform: rotate(180deg);
+
+  &.bounce {
+    animation: bounce 1s infinite;
+  }
+}
+
+/* Animation de rebondissement */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 /* Media query pour les écrans ayant une largeur maximale de 780 pixels */

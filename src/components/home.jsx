@@ -1,10 +1,21 @@
+import PropTypes from 'prop-types';
+
+
 import feuille from "../assets/img/feuille.jpg";
 import goutteEau from "../assets/img/goutteEau.png";
 import polygon from "../assets/polygon.png";
 
-function Home() {
+function Home({ isShifted }) {
+  
+  const containerStyles = {
+    transform: isShifted ? 'scale(0.5) translate(-40%, 0%) skew(0deg, -18deg)' : 'translate(0, 0)',
+    transition: 'transform 0.3s ease-in-out',
+    boxShadow: '-50px -26px 21px 9px rgba(255, 255, 255, 0.06)'
+  };
+
+
   return (
-    <div className="container">
+    <div className="container" style={containerStyles}>
       <div className="feuille">
         <img src={feuille} alt="feuille" />
       </div>
@@ -14,7 +25,7 @@ function Home() {
       <div className="goutte">
         <img src={goutteEau} alt="goutte d'eau" />
       </div>
-      <div className="prenomContainer">
+      <div className="prenomContainer" >
         <div className="mehdyH">
           <span className="span1">
             <span id="word_Mehdy">Mehdy</span>
@@ -30,5 +41,8 @@ function Home() {
     </div>
   );
 }
+Home.propTypes = {
+  isShifted: PropTypes.bool.isRequired
+};
 
 export default Home;
