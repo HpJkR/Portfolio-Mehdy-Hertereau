@@ -42,9 +42,9 @@ function NavBar({ onNavbarClick }) {
         </div>
         <div id="menuToggle" onClick={handleHelloButtonClick} >
           <input type="checkbox" />
-          <span id="span1"className={showLinks ? "span1" : ""}></span>
-          <span id="span2"className={showLinks ? "span2" : ""}></span>
-          <span id="span3"className={showLinks ? "span3" : ""}></span>
+          <span id="span1"className={showLinks ? " show-nav span1" : ""}></span>
+          <span id="span2"className={showLinks ? "show-nav span2" : ""}></span>
+          <span id="span3"className={showLinks ? "show-nav span3" : ""}></span>
         </div>
       </div>
       <ul className={`navbar_links ${hideNavItems ? "slide-out" : ""}`}>

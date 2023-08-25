@@ -114,17 +114,17 @@
     transform-origin: bottom right;
   }
 
-  input:checked ~ .span1 {
+  .show-nav.span1 {
     background-color: #FFEDB0;
     transform: rotate(45deg) translate(8px);
   }
 
-  input:checked ~ .span2 {
+  .show-nav.span2 {
     background-color: #FFEDB0;
     transform: rotate(495deg) translate(4px);
   }
 
-  input:checked ~ .span3 {
+  .show-nav.span3 {
     background-color: #FFEDB0;
     transform: rotate(-45deg);
     opacity: 0;
