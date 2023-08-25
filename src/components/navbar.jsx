@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function NavBar({ onNavbarClick }) {
   const pdfUrl =
-    "https://portfolio-mehdy-hertereau.vercel.app/download/CV-Mehdy-Hertereau.pdf";
+    "https://mehdy-hertereau.fr/download/CV-Mehdy-Hertereau.pdf";
     const [showLinks, setShowLinks] = useState(false);
     const [hideNavItems, setHideNavItems] = useState(true);
   

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import feuille from "../assets/img/feuille.jpg";
 import goutteEau from "../assets/img/goutteEau.png";
 import polygon from "../assets/polygon.png";
-// import logo from "../assets/img/mehdyStroke.svg";
 
 function Home({ isShifted }) {
   const logo = document.querySelectorAll("#logo path");
