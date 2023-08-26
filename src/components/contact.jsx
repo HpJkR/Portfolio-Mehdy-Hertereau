@@ -86,39 +86,68 @@ function Contact() {
           </div>
           {isCompany && (
             <div className="company-field">
-              <label>{"Nom de l'entreprise : "}</label>
+              <div className="form__group field">
               <input
                 type="text"
+                className="form__field"
+                placeholder="Nom de l'entreprise"
                 name="entreprise"
+                id="name"
+                required
                 value={formData.entreprise}
                 onChange={handleInputChange}
               />
+              <label htmlFor="name" className="form__label">{"Nom de l'entreprise"}</label>
+              </div>
             </div>
           )}
-          <label>Nom & Prénom</label>
-          <input
-            type="text"
-            name="nom"
-            value={formData.nom}
-            onChange={handleInputChange}
-          />
-          <label>Téléphone</label>
-          <input
-            type="tel"
-            name="tel"
-            value={formData.tel}
-            pattern="[0]{1}[1-9]{1}[0-9]{8}"
-            onChange={handleInputChange}
-          />
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            pattern="[^@\s]+@[^@\s]+.[^@\s]+"
-            onChange={handleInputChange}
-          />
-          <label>Message</label>
+          <div className="form__group field">
+            <input
+              type="text"
+              className="form__field"
+              placeholder="Name"
+              name="nom"
+              id="name"
+              required
+              value={formData.nom}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="name" className="form__label">
+              Nom & Prénom
+            </label>
+          </div>
+
+          <div className="form__group field">
+            <input
+              type="tel"
+              className="form__field"
+              placeholder="Téléphone"
+              name="tel"
+              id="name"
+              required
+              value={formData.tel}
+              pattern="[0]{1}[1-9]{1}[0-9]{8}"
+              onChange={handleInputChange}
+            />
+            <label htmlFor="name" className="form__label">
+              Téléphone
+            </label>
+          </div>
+          <div className="form__group field">
+            <input
+              type="email"
+              className="form__field"
+              placeholder="Email"
+              name="email"
+              id="name"
+              required
+              value={formData.email}
+              pattern="[^@\s]+@[^@\s]+.[^@\s]+"
+              onChange={handleInputChange}
+            />
+            <label htmlFor="name" className="form__label">Email</label>
+          </div>
+          <label id="iAMtoggle">Message</label>
           <textarea
             name="message"
             value={formData.message}
